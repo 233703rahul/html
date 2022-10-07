@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <style>
+ 
+        /* Styling the body */
+        * {
+            padding: 0;
+            margin: 0;
+        }
+ 
+        /* Styling the background image by
+        giving its url and position */
+        .container {
+            height: 100vh;
+            width: 100%;
+            background-image: url(
+'https://media.istockphoto.com/photos/sepia-tones-background-with-musical-staves-border-picture-id174624052?k=6&m=174624052&s=170667a&w=0&h=KGFrYYvCv8mnacTWbT8rfwtEMULVlA1UP3kqK9tIsok=');
+             
+            /* Image used: */
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+ 
+        /* Styling the list tags to the
+        right of the navigation bar */
+        .nav li {
+            float: right;
+            list-style: none;
+        }
+ 
+        /* Styling the anchor tags of
+        the navigation bar */
+        .nav a {
+            list-style: none;
+            height: 50px;
+            line-height: 50px;
+            font-size: 1rem;
+            font-weight: 550;
+            display: block;
+            padding: 5px 35px;
+            color: black;
+            text-decoration: none;
+        }
+ 
+        /* Giving position and margin
+        to the content-div */
+        .content {
+            width: 100%;
+            position: absolute;
+            top: 45%;
+        }
+ 
+        /* Styling the left-col by
+        giving margin */
+        .left-col {
+            margin-left: 11%;
+        }
+ 
+        /* Styling the my sound placed
+        in the left-col */
+        .left-col h1 {
+            font-size: 50px;
+            color: crimson;
+        }
+ 
+        /* Styling the right-col */
+        .right-col {
+            float: right;
+            margin-right: 10%;
+            margin-top: -5%;
+            display: flex;
+            align-items: center;
+        }
+ 
+        /* Styling the text in the right-col */
+        .right-col p {
+            font-size: 21px;
+            color: black;
+            font-weight: 650;
+            margin-right: 20px;
+        }
+ 
+        /* Styling the cursor type
+        of the icon to pointer */
+        #icon {
+            cursor: pointer;
+        }
+    </style>
+</head>
+ 
+<body>
+    <div class="container">
+        <ul class="nav">
+            <li><a href="#">CONTACT </a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">ARTISTS</a></li>
+            <li><a href="#">MUSIC</a></li>
+            <li><a href="#">HOME</a></li>
+        </ul>
+    </div>
+ 
+    <div class="content">
+        <div class="left-col">
+            <h1>  MUSICFY</h1>
+        </div>
+ 
+        <div class="right-col">
+    
+             
+ 
+<p>Recently Played</p>
+ 
+ 
+            <img src="palybutton.jpg" id="icon">
+        </div>
+    </div>
+ 
+    <audio id="mysound">
+        <source src="media/music.mp3" type="audio/mp3">
+    </audio>
+ 
+    <script>
+        var mysound = document.getElementById("mysound");
+        var icon = document.getElementById("icon");
+ 
+        // Creating a function that will change
+        // pause to play and vice-versa
+        icon.onclick = function() {
+            if (mysound.paused) {
+ 
+                // If paused then play the
+                // music and change the image
+                mysound.play();
+                icon.src =
+"https://media.geeksforgeeks.org/wp-content/uploads/20210402235545/Pause.png";
+            } else {
+ 
+                // If playing then pause the
+                // music and change the image
+                mysound.pause();
+                icon.src =
+"https://media.geeksforgeeks.org/wp-content/uploads/20210402235520/play.png";
+            }
+        }
+    </script>
+    
+    
+      /*  <div class="row">
+            <div class="column">
+              <img src="C:\Users\ustjavafsdb107\Desktop\Beatles.png">
+              <img src="C:\Users\ustjavafsdb107\Desktop\doors.jpg">
+              <img src="C:\Users\ustjavafsdb107\Desktop\pink.jpg">
+              <img src="C:\Users\ustjavafsdb107\Desktop\quater.jpg">
+              <img src="C:\Users\ustjavafsdb107\Desktop\jim.jpg">
+              <img src="C:\Users\ustjavafsdb107\Desktop\xten.jpg">
+              <img src="C:\Users\ustjavafsdb107\Desktop\mich.jpg">
+            </div>
+            .row {
+                display: flex;
+                flex-wrap: wrap;
+                padding: 0 4px;
+              }
+              
+              /* Create two equal columns that sits next to each other */
+              .column {
+                flex: 50%;
+                padding: 0 4px;
+              }
+              
+              .column img {
+                margin-top: 8px;
+                vertical-align: middle;
+              }
+              <button onclick="one()">1</button>
+<button onclick="two()">2</button>
+<button onclick="four()">4</button>
+
+<script>
+// Get the elements with class="column"
+var elements = document.getElementsByClassName("column");
+
+// Declare a "loop" variable
+var i;
+
+// Full-width images
+function one() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.flex = "100%";
+  }
+}
+
+// Two images side by side
+function two() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.flex = "50%";
+  }
+}
+
+// Four images side by side
+function four() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.flex = "25%";
+  }
+}
+</script> 
+
+           
+            
+           
+          
+
+</body>
+ 
+</html>
