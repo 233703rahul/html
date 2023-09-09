@@ -1,0 +1,30 @@
+
+
+---
+
+#Jenkins Pipeline
+
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building...'
+                // Run the build script
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing...'
+                // Run the test script
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying...'
+                // Run the deployment script
+            }
+        }
+    }
+}
